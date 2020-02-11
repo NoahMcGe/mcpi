@@ -13,7 +13,7 @@ def main():
 	tz.wm_title("Meme Menu")
 	tz.minsize(350, 100)
 	a = tk.Button(tz, text="setip",font=('courier', '20') ,command=guisetstatic.main)
-	b = tk.Button(tz, text="name minecraft",font=('courier', '20') ,command=guihex1name.main)
+	b = tk.Button(tz, text="name minecraft",font=('courier', '20') ,command=guihex1name.piname)
 	t1 = tk.Label(tz, text="-Noah and Preston",font=('courier', '10'))
 	a.pack()
 	b.pack()

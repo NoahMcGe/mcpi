@@ -160,11 +160,57 @@ def matrixO(mc,x,y,z):
 
 
 
+def matrixM(mc,x,y,z):
+    #    1 2 3 4 5 6 7 8 9 10
+   v=42
+   m = [[v,v,0,0,0,0,0,0,v,v],#1
+        [v,v,v,0,0,0,0,v,v,v],#2
+        [v,0,v,v,0,0,v,v,0,v],#3
+        [v,0,0,v,v,v,v,0,0,v],#4
+        [v,0,0,0,v,v,0,0,0,v],#5
+        [v,0,0,0,0,0,0,0,0,v],#6
+        [v,0,0,0,0,0,0,0,0,v],#7
+        [v,0,0,0,0,0,0,0,0,v],#8
+        [v,0,0,0,0,0,0,0,0,v],#9
+        [v,0,0,0,0,0,0,0,0,v]]#10
+   print(m)
+   for k in range (0,10):
+        for l  in range (0,10):
+            print(m[k][l],end="")
+            theBlock = m[k][l]
+            if (theBlock == 7):
+                theBlock = 79;
+            if (theBlock == 4):
+                theBlock = 14;
+            mc.setBlock(x,9+y-k,z+l,theBlock)
+   print()
 
 
 
-
-
+def matrixrealY(mc,x,y,z):
+    #    1 2 3 4 5 6 7 8 9 10
+   v=42
+   m = [[v,v,0,0,0,0,0,0,v,v],#1
+        [0,v,v,0,0,0,0,v,v,0],#2
+        [0,0,v,v,0,0,v,v,0,0],#3
+        [0,0,0,v,v,v,v,0,0,0],#4
+        [0,0,0,0,v,v,0,0,0,0],#5
+        [0,0,0,0,v,v,0,0,0,0],#6
+        [0,0,0,0,v,v,0,0,0,0],#7
+        [0,0,0,0,v,v,0,0,0,0],#8
+        [0,0,0,0,v,v,0,0,0,0],#9
+        [0,0,0,0,v,v,0,0,0,0]]#10
+   print(m)
+   for k in range (0,10):
+        for l  in range (0,10):
+            print(m[k][l],end="")
+            theBlock = m[k][l]
+            if (theBlock == 7):
+                theBlock = 79;
+            if (theBlock == 4):
+                theBlock = 14;
+            mc.setBlock(x,9+y-k,z+l,theBlock)
+   print()
 
 
 
@@ -205,17 +251,24 @@ def matrixY(mc,x,y,z):
     mc.setBlocks(x-1,y+10, z-1, x+11,y+10,z+11,89)
     mc.setBlocks(x-1,y+20, z-1, x+11,y+20,z+11,89)
 
-
-def main():
+def yo():
     mc = init()
     x,y,z = mc.player.getPos()
-    #matrixZ(mc,x,y,z)
-    matrixA(mc,x+5,y,z+11)
-    matrixB(mc,x+7,y,z+22)
-    matrixO(mc,x+9,y,z+33)
-    mc.player.setPos(x,y,z-2)
+    matrixrealY(mc,x+5,y,z+11)
+    matrixO(mc,x+7,y,z+22)
     x = x -20
-    #matrixY(mc,x,y,z)
+
+def amo():
+    mc = init()
+    x,y,z = mc.player.getPos()
+    matrixA(mc,x+9,y,z+33)
+    matrixM(mc,x+11,y,z+44)
+    matrixO(mc,x+13,y,z+55)
+    x = x -20
+
+def main():
+    yo()
+    amo()
 '''
 matrixA
 matrixB
