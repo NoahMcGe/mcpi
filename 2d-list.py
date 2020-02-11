@@ -6,7 +6,7 @@ from time import sleep
 
 def init():
     mc = Minecraft.create("127.0.0.1", 4711)
-    mc.setting("world_immutable",True)
+    #mc.setting("world_immutable",True)
     #x, y, z = mc.player.getPos()        
     return mc
 
@@ -55,7 +55,7 @@ def matrixZ(mc,x,y,z):
 
 def matrixblank(mc,x,y,z):
     #    1 2 3 4 5 6 7 8 9 10
-    v=11
+   v=42
    m = [[0,0,0,0,0,0,0,0,0,0],#1
         [0,0,0,0,0,0,0,0,0,0],#2
         [0,0,0,0,0,0,0,0,0,0],#3
@@ -66,8 +66,8 @@ def matrixblank(mc,x,y,z):
         [0,0,0,0,0,0,0,0,0,0],#8
         [0,0,0,0,0,0,0,0,0,0],#9
         [0,0,0,0,0,0,0,0,0,0]]#10
-    print(m)
-    for k in range (0,10):
+   print(m)
+   for k in range (0,10):
         for l  in range (0,10):
             print(m[k][l],end="")
             theBlock = m[k][l]
@@ -76,12 +76,12 @@ def matrixblank(mc,x,y,z):
             if (theBlock == 4):
                 theBlock = 14;
             mc.setBlock(x,9+y-k,z+l,theBlock)
-    print()
+   print()
 
 
 def matrixA(mc,x,y,z):
     #    1 2 3 4 5 6 7 8 9 10
-    v=11
+   v=42
    m = [[0,0,0,0,0,0,0,0,0,0],#1
         [0,0,0,0,v,0,0,0,0,0],#2
         [0,0,0,v,v,v,0,0,0,0],#3
@@ -92,8 +92,8 @@ def matrixA(mc,x,y,z):
         [v,v,v,v,v,v,v,v,v,0],#8
         [v,0,0,0,0,0,0,0,v,0],#9
         [v,0,0,0,0,0,0,0,v,0]]#10
-    print(m)
-    for k in range (0,10):
+   print(m)
+   for k in range (0,10):
         for l  in range (0,10):
             print(m[k][l],end="")
             theBlock = m[k][l]
@@ -102,11 +102,11 @@ def matrixA(mc,x,y,z):
             if (theBlock == 4):
                 theBlock = 14;
             mc.setBlock(x,9+y-k,z+l,theBlock)
-    print()
+   print()
 
 def matrixB(mc,x,y,z):
     #    1 2 3 4 5 6 7 8 9 10
-    v=11
+   v=42
    m = [[0,0,0,0,0,0,0,0,0,0],#1
         [0,v,v,v,v,v,0,0,0,0],#2
         [0,v,0,0,0,0,v,0,0,0],#3
@@ -117,8 +117,8 @@ def matrixB(mc,x,y,z):
         [0,v,0,0,0,0,0,v,0,0],#8
         [0,v,v,v,v,v,v,0,0,0],#9
         [0,0,0,0,0,0,0,0,0,0]]#10
-    print(m)
-    for k in range (0,10):
+   print(m)
+   for k in range (0,10):
         for l  in range (0,10):
             print(m[k][l],end="")
             theBlock = m[k][l]
@@ -127,13 +127,13 @@ def matrixB(mc,x,y,z):
             if (theBlock == 4):
                 theBlock = 14;
             mc.setBlock(x,9+y-k,z+l,theBlock)
-    print()
+   print()
 
 
 
 def matrixO(mc,x,y,z):
     #    1 2 3 4 5 6 7 8 9 10
-    v=11
+   v=42
    m = [[0,0,0,0,0,0,0,0,0,0],#1
         [0,v,v,v,v,v,v,v,v,0],#2
         [0,v,0,0,0,0,0,0,v,0],#3
@@ -144,8 +144,8 @@ def matrixO(mc,x,y,z):
         [0,v,0,0,0,0,0,0,v,0],#8
         [0,v,v,v,v,v,v,v,v,0],#9
         [0,0,0,0,0,0,0,0,0,0]]#10
-    print(m)
-    for k in range (0,10):
+   print(m)
+   for k in range (0,10):
         for l  in range (0,10):
             print(m[k][l],end="")
             theBlock = m[k][l]
@@ -154,7 +154,7 @@ def matrixO(mc,x,y,z):
             if (theBlock == 4):
                 theBlock = 14;
             mc.setBlock(x,9+y-k,z+l,theBlock)
-    print()
+   print()
 
 
 
@@ -209,10 +209,10 @@ def matrixY(mc,x,y,z):
 def main():
     mc = init()
     x,y,z = mc.player.getPos()
-    matrixZ(mc,x,y,z)
-    matrixA(mc,x+11,y,z)
-    matrixB(mc,x+11,y,z)
-    matrixO(mc,x+11,y,z)
+    #matrixZ(mc,x,y,z)
+    matrixA(mc,x+5,y,z+11)
+    matrixB(mc,x+7,y,z+22)
+    matrixO(mc,x+9,y,z+33)
     mc.player.setPos(x,y,z-2)
     x = x -20
     #matrixY(mc,x,y,z)
