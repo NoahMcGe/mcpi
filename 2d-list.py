@@ -1,7 +1,7 @@
 from mcpi.minecraft import Minecraft
 from mcpi import block
 from time import sleep
-
+v=246
 def init():
     mc = Minecraft.create("127.0.0.1", 4711)
     #mc.setting("world_immutable",True)
@@ -55,7 +55,6 @@ def matrixZ(mc,x,y,z):
 
 def matrixblank(mc,x,y,z):
     #    1 2 3 4 5 6 7 8 9 10
-   v=42
    m = [[0,0,0,0,0,0,0,0,0,0],#1
         [0,0,0,0,0,0,0,0,0,0],#2
         [0,0,0,0,0,0,0,0,0,0],#3
@@ -81,7 +80,6 @@ def matrixblank(mc,x,y,z):
 
 def matrixA(mc,x,y,z):
     #    1 2 3 4 5 6 7 8 9 10
-   v=42
    m = [[0,0,0,0,0,0,0,0,0,0],#1
         [0,0,0,0,v,0,0,0,0,0],#2
         [0,0,0,v,v,v,0,0,0,0],#3
@@ -106,7 +104,6 @@ def matrixA(mc,x,y,z):
 
 def matrixB(mc,x,y,z):
     #    1 2 3 4 5 6 7 8 9 10
-   v=42
    m = [[0,0,0,0,0,0,0,0,0,0],#1
         [0,v,v,v,v,v,0,0,0,0],#2
         [0,v,0,0,0,0,v,0,0,0],#3
@@ -133,7 +130,6 @@ def matrixB(mc,x,y,z):
 
 def matrixO(mc,x,y,z):
     #    1 2 3 4 5 6 7 8 9 10
-   v=42
    m = [[0,0,0,0,0,0,0,0,0,0],#1
         [0,v,v,v,v,v,v,v,v,0],#2
         [0,v,0,0,0,0,0,0,v,0],#3
@@ -162,7 +158,6 @@ def matrixO(mc,x,y,z):
 
 def matrixM(mc,x,y,z):
     #    1 2 3 4 5 6 7 8 9 10
-   v=42
    m = [[v,v,0,0,0,0,0,0,v,v],#1
         [v,v,v,0,0,0,0,v,v,v],#2
         [v,0,v,v,0,0,v,v,0,v],#3
@@ -189,7 +184,6 @@ def matrixM(mc,x,y,z):
 
 def matrixrealY(mc,x,y,z):
     #    1 2 3 4 5 6 7 8 9 10
-   v=42
    m = [[v,v,0,0,0,0,0,0,v,v],#1
         [0,v,v,0,0,0,0,v,v,0],#2
         [0,0,v,v,0,0,v,v,0,0],#3
