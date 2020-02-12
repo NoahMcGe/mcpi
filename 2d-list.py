@@ -1,5 +1,3 @@
-# Base project format.
-# Documentation https://github.com/raspberrypilearning/getting-started-with-minecraft-pi/blob/master/worksheet.md
 from mcpi.minecraft import Minecraft
 from mcpi import block
 from time import sleep
@@ -9,7 +7,7 @@ def init():
     #mc.setting("world_immutable",True)
     #x, y, z = mc.player.getPos()        
     return mc
-
+'''
 def matrixZ(mc,x,y,z):
     m = [[5,5,1,1,1,1,1,1,4,4],
         [5,5,7,7,7,7,7,7,4,4],
@@ -32,6 +30,7 @@ def matrixZ(mc,x,y,z):
                 theBlock = 14;
             mc.setBlock(x,9+y-k,z+l,theBlock)
     print()
+'''
 
 
 
@@ -40,11 +39,12 @@ def matrixZ(mc,x,y,z):
 
 
 
-
-
-
-
-
+#Start
+#Start
+#Start
+#Start
+#Start
+#Start
 
 
 
@@ -223,7 +223,7 @@ def matrixrealY(mc,x,y,z):
 
 
 
-
+'''
 
 
 
@@ -250,7 +250,7 @@ def matrixY(mc,x,y,z):
     mc.setBlocks(x-1,y-5, z-1, x+11,y-5,z+11,89)
     mc.setBlocks(x-1,y+10, z-1, x+11,y+10,z+11,89)
     mc.setBlocks(x-1,y+20, z-1, x+11,y+20,z+11,89)
-
+'''
 def yo():
     mc = init()
     x,y,z = mc.player.getPos()
@@ -261,9 +261,9 @@ def yo():
 def amo():
     mc = init()
     x,y,z = mc.player.getPos()
-    matrixA(mc,x+9,y,z+33)
-    matrixM(mc,x+11,y,z+44)
-    matrixO(mc,x+13,y,z+55)
+    matrixA(mc,x+9,y,z+36)
+    matrixM(mc,x+11,y,z+46)
+    matrixO(mc,x+13,y,z+56)
     x = x -20
 
 def main():
@@ -273,6 +273,7 @@ def main():
 matrixA
 matrixB
 matrixO
+matrixrealY
 
 '''
 
